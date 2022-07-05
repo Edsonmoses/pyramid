@@ -11,7 +11,7 @@
         <div class="col-lg-4">
     		<div class="post">
     			<figure class="post-image">
-    				<img src="{{ asset('assets/user/images/oak.jpg')}}" alt="Image">
+    				<img src="{{ asset('assets/user/images/slide01.jpg')}}" alt="Image">
     			</figure>
     			<div class="post-content">
     				<h2 class="post-title"><a href="/projects-detail">Pyramid Ridge</a></h2>
@@ -24,7 +24,7 @@
             <div class="col-lg-4">
     		<div class="post">
     			<figure class="post-image">
-    				<img src="{{ asset('assets/user/images/oak.jpg')}}" alt="Image">
+    				<img src="{{ asset('assets/user/images/slide02.jpg')}}" alt="Image">
     			</figure>
     			<div class="post-content">
     				<h2 class="post-title"><a href="/projects-detail">28 Apple Cross</a></h2>
@@ -37,7 +37,7 @@
     	<div class="col-lg-4">
     		<div class="post">
     			<figure class="post-image">
-    				<img src="{{ asset('assets/user/images/oak.jpg')}}" alt="Image">
+    				<img src="{{ asset('assets/user/images/slide03.jpg')}}" alt="Image">
     			</figure>
     			<div class="post-content">
     				<h2 class="post-title"><a href="/projects-detail">Pyramid Park</a></h2>
@@ -63,7 +63,7 @@
         <div class="col-lg-4">
     		<div class="post">
     			<figure class="post-image">
-    				<img src="{{ asset('assets/user/images/oak.jpg')}}" alt="Image">
+    				<img src="{{ asset('assets/user/images/slide01.jpg')}}" alt="Image">
     			</figure>
     			<div class="post-content">
     				<h2 class="post-title"><a href="/projects-detail">Pyramid Valley</a></h2>
@@ -76,7 +76,7 @@
         <div class="col-lg-4">
     		<div class="post">
     			<figure class="post-image">
-    				<img src="{{ asset('assets/user/images/oak.jpg')}}" alt="Image">
+    				<img src="{{ asset('assets/user/images/slide02.jpg')}}" alt="Image">
     			</figure>
     			<div class="post-content">
     				<h2 class="post-title"><a href="/projects-detail">Pyramid Villas</a></h2>
@@ -89,7 +89,7 @@
         <div class="col-lg-4">
     		<div class="post">
     			<figure class="post-image">
-    				<img src="{{ asset('assets/user/images/oak.jpg')}}" alt="Image">
+    				<img src="{{ asset('assets/user/images/slide03.jpg')}}" alt="Image">
     			</figure>
     			<div class="post-content">
     				<h2 class="post-title"><a href="/projects-detail">Pyramid Palms</a></h2>
@@ -115,7 +115,7 @@
          <div class="col-lg-4">
     		<div class="post">
     			<figure class="post-image">
-    				<img src="{{ asset('assets/user/images/oak.jpg')}}" alt="Image">
+    				<img src="{{ asset('assets/user/images/slide02.jpg')}}" alt="Image">
     			</figure>
     			<div class="post-content">
     				<h2 class="post-title"><a href="/projects-detail">Pyramid Gardens</a></h2>
@@ -128,7 +128,7 @@
          <div class="col-lg-4">
     		<div class="post">
     			<figure class="post-image">
-    				<img src="{{ asset('assets/user/images/oak.jpg')}}" alt="Image">
+    				<img src="{{ asset('assets/user/images/slide01.jpg')}}" alt="Image">
     			</figure>
     			<div class="post-content">
     				<h2 class="post-title"><a href="/projects-detail">Pyramid Court</a></h2>

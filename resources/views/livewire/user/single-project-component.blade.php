@@ -1,5 +1,5 @@
 <div>
-    <header class="page-header" data-background="{{ asset('assets/user/images/slide01.jpg')}}" data-stellar-background-ratio="1.15">
+    <header class="page-header" data-background="{{ asset('assets/user/images/slide02.jpg')}}" data-stellar-background-ratio="1.15">
 	<div class="container">
 		{{-- <h1>Aboutus</h1> --}}
 	</div>
