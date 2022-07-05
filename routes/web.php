@@ -5,6 +5,7 @@ use App\Http\Livewire\User\ContactUsComponent;
 use App\Http\Livewire\User\HomeComponent;
 use App\Http\Livewire\User\NowSellingComponent;
 use App\Http\Livewire\User\OurProjectsComponent;
+use App\Http\Livewire\User\SingleProjectComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,7 @@ Route::get('/', HomeComponent::class);
 Route::get('/about-us', AboutUsComponent::class);
 Route::get('/now-selling', NowSellingComponent::class);
 Route::get('/our-projects', OurProjectsComponent::class);
+Route::get('/projects-detail', SingleProjectComponent::class);
 Route::get('/contact-us', ContactUsComponent::class);
 
 

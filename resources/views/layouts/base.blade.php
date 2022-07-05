@@ -110,7 +110,7 @@
     <div class="menu">
       <ul>
         <li><a href="/about-us">About Us</a></li>
-        <li><a href="/now-selling">Now Selling</a></li>
+       <!-- <li><a href="/now-selling">Now Selling</a></li>-->
         <li><a href="/our-projects">Our Projects</a></li>
         <li><a href="/contact-us">Contact Us</a></li>
       </ul>
