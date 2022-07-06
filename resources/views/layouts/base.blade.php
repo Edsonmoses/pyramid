@@ -220,5 +220,6 @@
 <script src="{{ asset('assets/user/js/jquery.stellar.js')}}"></script> 
 <script src="{{ asset('assets/user/js/isotope.min.js')}}"></script> 
 <script src="{{ asset('assets/user/js/scripts.js')}}"></script>
+
 </body>
 </html>

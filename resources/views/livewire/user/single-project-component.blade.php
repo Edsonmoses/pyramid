@@ -37,18 +37,44 @@
        <!-- end col-3 -->
 		</div>
 		<!-- end row -->
-        <div class="row ">
-            <div class="col-md-6" style="padding-right:2.5px !important"><img src="{{ asset('assets/user/images/slide01.jpg')}}" alt="Image"></div>
-            <div class="col-md-6" style="padding-left:2.5px !important"><img src="{{ asset('assets/user/images/slide02.jpg')}}" alt="Image"></div>
-            <div style="padding: 2.5px; width:100%"></div>
-            <div class="col-md-4" style="padding-right:2.5px !important"><img src="{{ asset('assets/user/images/slide03.jpg')}}" alt="Image"></div>
-            <div class="col-md-4" style="padding-right:2.5px !important; padding-left:2.5px !important"><img src="{{ asset('assets/user/images/slide01.jpg')}}" alt="Image"></div>
-            <div class="col-md-4" style="padding-left:2.5px !important"><img src="{{ asset('assets/user/images/slide02.jpg')}}" alt="Image"></div>
+    	<!-- gallery section -->
+         <div class="pgallery row mt-5">
+      <!-- 2 -->
+      <div class="pgallery-list col-md-6 col-xs-12 grt">
+        <div class="pimage-grid">
+          <img src="{{ asset('assets/user/images/slide06.jpg')}}">
         </div>
-        <!-- end row -->
+      </div>
+      <div class="pgallery-list col-md-6 col-xs-12glt">
+        <div class="pimage-grid">
+          <img src="{{ asset('assets/user/images/slide07.jpg')}}">
+        </div>
+      </div>
+     <!-- 2 -->
+      
+      <!-- 3 -->
+      <div class="pgallery-list col-md-4 col-xs-12 grt gmt">
+        <div class="pimage-grid">
+          <img src="{{ asset('assets/user/images/slide08.jpg')}}">
+        </div>
+      </div>
+      <div class="pgallery-list col-md-4 col-xs-12 gmd gmt">
+        <div class="pimage-grid">
+          <img src="{{ asset('assets/user/images/slide01.jpg')}}">
+        </div>
+      </div>
+      <div class="pgallery-list col-md-4 col-xs-12 glt gmt">
+        <div class="pimage-grid">
+          <img src="{{ asset('assets/user/images/slide02.jpg')}}">
+        </div>
+      </div>
+     <!-- 3 -->
+    </div>
+       <!-- gallery section -->
 	</div>
 	<!-- end container -->
     <!--floor plans-->
+    
 <header class="slider">
   <div class="slider-container">
     <div class="swiper-wrapper">

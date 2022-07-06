@@ -1,6 +1,6 @@
-<header class="page-header" data-background="{{ asset('assets/user/images/slide01.jpg')}}" data-stellar-background-ratio="1.15">
+<header class="page-header" data-background="{{ asset('assets/user/images/slide02.jpg')}}" data-stellar-background-ratio="1.15">
 	<div class="container">
-		<h1>About us</h1>
+		<!--<h1>About us</h1>-->
 	</div>
 	<!-- end container -->
 </header>
@@ -9,7 +9,7 @@
 	<div class="container">
 		<div class="row">
         <div class="col-md-12 text-align-center mb-5">
-            <h3 style="font-size: 2.3em"><strong>strive to create lasting value through quality construction, superior design and an unparalleled commitment to customer service.</strong> </h3>
+            <h3 style="font-size: 2.3em"><strong>We strive to create lasting value through quality construction, superior design and an unparalleled commitment to customer service.</strong> </h3>
         </div>
         <!-- end col-12 -->
        <div class="col-md-4 text-align-center">
