@@ -186,8 +186,8 @@
       <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.20s">
         <div class="contact-box">
           <h5>CALL CENTER</h5>
-          <h3>+254 (0)700 779 944</h3>
-          <p><a href="#">hello@pyramidbuilders.co.ke</a></p>
+          <h3>+254 722 981 125 /<br/>+254 720 150 988</h3>
+          <p><a href="#">info@pyramidbuilders.co.ke</a></p>
           <ul>
             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="#"><i class="fab fa-twitter"></i></a></li>

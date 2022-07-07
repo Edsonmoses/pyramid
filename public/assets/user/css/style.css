@@ -3858,6 +3858,7 @@ a {
 .content-details p {
     color: #fff;
     font-size: 0.8em;
+    text-align: left;
 }
 .overtext {
     color: white !important;
@@ -3881,6 +3882,7 @@ a {
 .overtext a {
     color: white !important;
     text-align: left;
+    text-decoration: none;
 }
 .img-overlay {
     position: absolute;

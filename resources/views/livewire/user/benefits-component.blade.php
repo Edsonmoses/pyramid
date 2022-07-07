@@ -7,7 +7,7 @@
           <h4><span>HOMES IN</span> THE MOST</h4>
           <h3> SOUGHT-AFTER LOCATIONS</h3>
           <p>As one of Nairobi’s leading luxury house builders, we are able to offer our customers an unrivaled choice of property location, size and type.</p>
-          <a href="#">SCHEDULE A VISIT <i class="fas fa-caret-right"></i></a> </div>
+          <a href="#">Read More <i class="fas fa-caret-right"></i></a> </div>
         <!-- end content-box --> 
       </div>
       <!-- end col-6 --> 

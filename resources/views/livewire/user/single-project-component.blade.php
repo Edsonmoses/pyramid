@@ -42,12 +42,12 @@
       <!-- 2 -->
       <div class="pgallery-list col-md-6 col-xs-12 grt">
         <div class="pimage-grid">
-          <img src="{{ asset('assets/user/images/slide06.jpg')}}">
+          <img src="{{ asset('assets/user/images/inSliders0.jpg')}}">
         </div>
       </div>
       <div class="pgallery-list col-md-6 col-xs-12glt">
         <div class="pimage-grid">
-          <img src="{{ asset('assets/user/images/slide07.jpg')}}">
+          <img src="{{ asset('assets/user/images/inSliders02.jpg')}}">
         </div>
       </div>
      <!-- 2 -->
@@ -55,17 +55,17 @@
       <!-- 3 -->
       <div class="pgallery-list col-md-4 col-xs-12 grt gmt">
         <div class="pimage-grid">
-          <img src="{{ asset('assets/user/images/slide08.jpg')}}">
+          <img src="{{ asset('assets/user/images/inSliders03.jpg')}}">
         </div>
       </div>
       <div class="pgallery-list col-md-4 col-xs-12 gmd gmt">
         <div class="pimage-grid">
-          <img src="{{ asset('assets/user/images/slide01.jpg')}}">
+          <img src="{{ asset('assets/user/images/inSliders04.jpg')}}">
         </div>
       </div>
       <div class="pgallery-list col-md-4 col-xs-12 glt gmt">
         <div class="pimage-grid">
-          <img src="{{ asset('assets/user/images/slide02.jpg')}}">
+          <img src="{{ asset('assets/user/images/inSliders05.jpg')}}">
         </div>
       </div>
      <!-- 3 -->
@@ -78,19 +78,37 @@
 <header class="slider">
   <div class="slider-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" data-background="{{ asset('assets/user/images/slide01.jpg')}}" data-stellar-background-ratio="1.15">
+      <div class="swiper-slide" data-background="{{ asset('assets/user/images/SquareFloorPlans.jpg')}}" data-stellar-background-ratio="1.15">
         <div class="container">
         </div>
         <!-- end container --> 
       </div>
       <!-- end swiper-slide -->
-      <div class="swiper-slide" data-background="{{ asset('assets/user/images/slide02.jpg')}}" data-stellar-background-ratio="1.15">
+      <div class="swiper-slide" data-background="{{ asset('assets/user/images/SquareFloorPlan2.jpg')}}" data-stellar-background-ratio="1.15">
         <div class="container">
         </div>
         <!-- end container --> 
       </div>
       <!-- end swiper-slide -->
-      <div class="swiper-slide" data-background="{{ asset('assets/user/images/slide03.jpg')}}" data-stellar-background-ratio="1.15">
+      <div class="swiper-slide" data-background="{{ asset('assets/user/images/SquareFloorPlans3.jpg')}}" data-stellar-background-ratio="1.15">
+        <div class="container">
+        </div>
+        <!-- end container --> 
+      </div>
+      <!-- end swiper-slide --> 
+        <div class="swiper-slide" data-background="{{ asset('assets/user/images/SquareFloorPlan6.jpg')}}" data-stellar-background-ratio="1.15">
+        <div class="container">
+        </div>
+        <!-- end container --> 
+      </div>
+      <!-- end swiper-slide --> 
+        <div class="swiper-slide" data-background="{{ asset('assets/user/images/SquareFloorPlans4.jpg')}}" data-stellar-background-ratio="1.15">
+        <div class="container">
+        </div>
+        <!-- end container --> 
+      </div>
+      <!-- end swiper-slide --> 
+        <div class="swiper-slide" data-background="{{ asset('assets/user/images/SquareFloorPlans5.jpg')}}" data-stellar-background-ratio="1.15">
         <div class="container">
         </div>
         <!-- end container --> 
