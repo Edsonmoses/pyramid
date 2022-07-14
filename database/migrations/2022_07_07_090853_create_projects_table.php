@@ -15,11 +15,11 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
+            $table->longText('title')->nullable();
             $table->string('name');
             $table->string('slug')->unique();
             $table->string('image')->nullable();
-            $table->string('desc');
+            $table->longText('desc');
             $table->string('statno')->nullable();
             $table->string('statname')->nullable();
             $table->string('statsub')->nullable();
@@ -27,6 +27,8 @@ class CreateProjectsTable extends Migration
             $table->string('floorplan')->nullable();
             $table->string('fimage')->nullable();
             $table->string('download')->nullable();
+            $table->string('downloadCount')->nullable()->default('0');
+            $table->enum('disable', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
     }

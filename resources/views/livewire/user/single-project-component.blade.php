@@ -1,19 +1,43 @@
 <div>
-    <header class="page-header" data-background="{{ asset('assets/user/images/slide02.jpg')}}" data-stellar-background-ratio="1.15">
+    <header class="page-header" data-background="{{ asset('assets/user/images')}}/{{ $project->image }}" data-stellar-background-ratio="1.15">
 	<div class="container">
 		{{-- <h1>Aboutus</h1> --}}
 	</div>
 	<!-- end container -->
 </header>
+
 <!-- end page-header -->
 <section class="about-content mb-5">
 	<div class="container">
 		<div class="row ">
-        <div class="col-md-12 text-align-left mb-5 text-blue">
-            <h3 style="font-size: 1.3em"><strong>s28 Apple Cross is a luxurious development containing nine (8) five-bedroom modern townhouses. Each house also contains an indoor and outdoor kitchen, a family room, a study and two (2) DSQs. Located in Lavington in a secure gated community, 28 Apple Cross offers residents a unique combination of quality living, convenience and tranquillity.</strong> </h3>
-        </div>
+       {{-- <div class="col-md-12 text-align-left mb-5 text-blue">
+            <h3 style="font-size: 1.3em"><strong>{{ $project->title }}</strong> </h3>
+        </div>--}}
         <!-- end col-12 -->
+        @if ($project->slug == 'tende-ridge')
        <div class="col-md-3 text-align-center leftCont">
+         <h6 style="color: #C8773D !important; border-right: 1px solid #C8773D !important;">6</h6>
+        <p>CONTEMPORARY DESIGNED TOWNHOUSES <span></span></p>
+       
+       </div>
+       <!-- end col-3 -->
+       <div class="col-md-3 text-align-center leftCont">
+        <h6 style="color: #C8773D !important; border-right: 1px solid #C8773D !important;">5</h6>
+        <p>BEDROOMS <br/>ALL ENSUITE<br/><span>GUESTROOM <br/>INCLUDED</span> </p>
+       </div>
+       <!-- end col-3 -->
+       <div class="col-md-3 text-align-center leftCont">
+        <h6 style="color: #C8773D !important; border-right: 1px solid #C8773D !important;">1</h6>
+        <p>SELF<br/>CONTAINED <br/>DSQs</p>
+       </div>
+       <!-- end col-3 -->
+       <div class="col-md-3 text-align-center leftCont">
+        <h6 style="color: #C8773D !important; border-right: 1px solid #C8773D !important;">1</h6>
+        <p>EXCLUSIVE<br/> GATED LOCATION <br/><span>KANJATA ROAD, LAVINGTON</span></p>
+        
+       </div>
+       @else
+        <div class="col-md-3 text-align-center leftCont">
          <h6>9</h6>
         <p>MASTERFULLY DESIGNED TOWNHOUSES <span>MEDITERRANEAN STYLE</span></p>
        
@@ -26,7 +50,7 @@
        <!-- end col-3 -->
        <div class="col-md-3 text-align-center leftCont">
         <h6>2</h6>
-        <p>SELF<br/> CONTAIN <br/>DSQs</p>
+        <p>SELF<br/> CONTAINED <br/>DSQs</p>
        </div>
        <!-- end col-3 -->
        <div class="col-md-3 text-align-center leftCont">
@@ -34,86 +58,45 @@
         <p>EXCLUSIVE<br/> GATED LOCATION <br/><span>MAJI MAZURI ROAD</span></p>
         
        </div>
+       @endif
        <!-- end col-3 -->
 		</div>
 		<!-- end row -->
     	<!-- gallery section -->
          <div class="pgallery row mt-5">
-      <!-- 2 -->
-      <div class="pgallery-list col-md-6 col-xs-12 grt">
-        <div class="pimage-grid">
-          <img src="{{ asset('assets/user/images/inSliders0.jpg')}}">
-        </div>
-      </div>
-      <div class="pgallery-list col-md-6 col-xs-12glt">
-        <div class="pimage-grid">
-          <img src="{{ asset('assets/user/images/inSliders02.jpg')}}">
-        </div>
-      </div>
-     <!-- 2 -->
-      
-      <!-- 3 -->
-      <div class="pgallery-list col-md-4 col-xs-12 grt gmt">
-        <div class="pimage-grid">
-          <img src="{{ asset('assets/user/images/inSliders03.jpg')}}">
-        </div>
-      </div>
-      <div class="pgallery-list col-md-4 col-xs-12 gmd gmt">
-        <div class="pimage-grid">
-          <img src="{{ asset('assets/user/images/inSliders04.jpg')}}">
-        </div>
-      </div>
-      <div class="pgallery-list col-md-4 col-xs-12 glt gmt">
-        <div class="pimage-grid">
-          <img src="{{ asset('assets/user/images/inSliders05.jpg')}}">
-        </div>
-      </div>
-     <!-- 3 -->
+           @php $i = 1 ;
+         @endphp
+         @foreach (explode(",",$project->gallery) as $image)
+        
+            <div class="pgallery-list @if (!empty($image))@if($i==2) col-md-6 col-xs-12 grt @endif @if($i == 3) col-md-6 col-xs-12 glt @endif @if($i == 4) col-md-4 col-xs-12 grt gmt @endif @if($i==5) col-md-4 col-xs-12 gmd gmt @endif @if($i==6) col-md-4 col-xs-12 glt gmt @endif @endif">
+               @if (!empty($image))
+              <div class="pimage-grid">
+                <img src="{{ asset('assets/user/images')}}/{{ $image }}">
+                <p style="color:black">{{$i}}</p>
+              </div>
+              @endif
+            </div>
+            @php $i++; @endphp
+            @endforeach
     </div>
        <!-- gallery section -->
 	</div>
 	<!-- end container -->
     <!--floor plans-->
     
-<header class="slider">
+<header class="slider" style="background: transparent !important">
   <div class="slider-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" data-background="{{ asset('assets/user/images/SquareFloorPlans.jpg')}}" data-stellar-background-ratio="1.15">
-        <div class="container">
-        </div>
-        <!-- end container --> 
-      </div>
+       @foreach (explode(",",$project->floorplan) as $image)
+        @if (!empty($image))
+          <div class="swiper-slide" data-background="{{ asset('assets/user/images')}}/{{ $image }}" data-stellar-background-ratio="1.15">
+            <div class="container">
+            </div>
+            <!-- end container --> 
+          </div>
+        @endif
+      @endforeach
       <!-- end swiper-slide -->
-      <div class="swiper-slide" data-background="{{ asset('assets/user/images/SquareFloorPlan2.jpg')}}" data-stellar-background-ratio="1.15">
-        <div class="container">
-        </div>
-        <!-- end container --> 
-      </div>
-      <!-- end swiper-slide -->
-      <div class="swiper-slide" data-background="{{ asset('assets/user/images/SquareFloorPlans3.jpg')}}" data-stellar-background-ratio="1.15">
-        <div class="container">
-        </div>
-        <!-- end container --> 
-      </div>
-      <!-- end swiper-slide --> 
-        <div class="swiper-slide" data-background="{{ asset('assets/user/images/SquareFloorPlan6.jpg')}}" data-stellar-background-ratio="1.15">
-        <div class="container">
-        </div>
-        <!-- end container --> 
-      </div>
-      <!-- end swiper-slide --> 
-        <div class="swiper-slide" data-background="{{ asset('assets/user/images/SquareFloorPlans4.jpg')}}" data-stellar-background-ratio="1.15">
-        <div class="container">
-        </div>
-        <!-- end container --> 
-      </div>
-      <!-- end swiper-slide --> 
-        <div class="swiper-slide" data-background="{{ asset('assets/user/images/SquareFloorPlans5.jpg')}}" data-stellar-background-ratio="1.15">
-        <div class="container">
-        </div>
-        <!-- end container --> 
-      </div>
-      <!-- end swiper-slide --> 
     </div>
     {{-- Add Pagination -->
     <div class="inner-elements">
@@ -143,15 +126,15 @@
 </header>
     <!--end floor plans-->
 </section>
-<section class="big-image">
+<section class="big-image" style="background:  url('{{ asset('assets/user/images')}}/{{ $project->fimage }}')" >
   <div class="container">
     <!-- end row --> 
   </div>
   <!-- end container --> 
 </section>
-<section class="downloads">
+<section class="downloads mb-5">
   <div class="container">
-    <a href="#" download="brochure">
+   <a href="{{ asset('assets/user/images')}}/{{ $project->download }}" download="{{ $project->name }}.pdf"> 
         <img src="{{ asset('assets/user/images/arrow.png')}}" alt="Image">
         <p>VIEW BROCHURE</p>
     </a>

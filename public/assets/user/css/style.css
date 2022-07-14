@@ -2691,13 +2691,16 @@ a {
     width: 100%;
     display: block;
 }
-.blog .sidebar .widget form input[type="text"] {
+.blog .sidebar .widget form input[type="text"],
+.footered .sidebar .widget form input[type="text"] {
     width: calc(100% - 50px);
     float: left;
     border: 1px solid #ebcfa7;
     border-right: none;
 }
-.blog .sidebar .widget form button[type="submit"] {
+.blog .sidebar .widget form button[type="submit"],
+.footered .sidebar .widget form button[type="submit"],
+.footered .sidebar .widget form button {
     width: 50px;
     padding: 0;
 }
@@ -3752,8 +3755,7 @@ a {
     line-height: 1;
 }
 .big-image {
-    background: url("../images/slide04.jpg");
-    height: 300px;
+    height: 600px;
     margin: -56px 0 10px 0;
 }
 /**Image Overlay Hover Effects**/
@@ -3799,7 +3801,7 @@ a {
 }
 
 .content .content-overlay {
-    background: rgba(174, 132, 30, 0.7);
+    background: rgba(174, 132, 30, 0.9);
     position: absolute;
     height: 100%;
     width: 100%;
@@ -3917,5 +3919,17 @@ a {
     left: 80%;
 }
 /** floor plan slider**/
-
+/**mailing list**/
+.footered {
+    background: #2d2d2d;
+    height: 150px;
+    width: 100%;
+    padding: 35px 0 0 0;
+}
+.footered p {
+    color: #dee2e6;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
 /*# sourceMappingURL=style.css.map */

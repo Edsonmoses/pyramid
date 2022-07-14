@@ -99,6 +99,27 @@
                             <x-jet-dropdown-link href="{{ route('profile.show') }}">
                                 {{ __('Profile') }}
                             </x-jet-dropdown-link>
+                             <x-jet-dropdown-link href="{{ route('category') }}">
+                                {{ __('Category') }}
+                            </x-jet-dropdown-link>
+                             <x-jet-dropdown-link href="{{ route('projects') }}">
+                                {{ __('Projects') }}
+                            </x-jet-dropdown-link>
+                             <x-jet-dropdown-link href="{{ route('logos') }}">
+                                {{ __('Logos') }}
+                            </x-jet-dropdown-link>
+                             <x-jet-dropdown-link href="{{ route('pages') }}">
+                                {{ __('Pages') }}
+                            </x-jet-dropdown-link>
+                             <x-jet-dropdown-link href="{{ route('property') }}">
+                                {{ __('Properties') }}
+                            </x-jet-dropdown-link>
+                             <x-jet-dropdown-link href="{{ route('settings') }}">
+                                {{ __('Settings') }}
+                            </x-jet-dropdown-link>
+                             <x-jet-dropdown-link href="{{ route('sliders') }}">
+                                {{ __('Sliders') }}
+                            </x-jet-dropdown-link>
 
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                 <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
@@ -162,6 +183,27 @@
                 <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
                     {{ __('Profile') }}
                 </x-jet-responsive-nav-link>
+                 <x-jet-responsive-nav-link href="{{ route('category') }}" :active="request()->routeIs('category')">
+                    {{ __('Category') }}
+                </x-jet-responsive-nav-link>
+                 <x-jet-responsive-nav-link href="{{ route('projects') }}" :active="request()->routeIs('projects')">
+                    {{ __('Projects') }}
+                </x-jet-responsive-nav-link>
+                 <x-jet-dropdown-link href="{{ route('logos') }}" :active="request()->routeIs('logos')">
+                                {{ __('Logos') }}
+                            </x-jet-dropdown-link>
+                             <x-jet-dropdown-link href="{{ route('pages') }}" :active="request()->routeIs('pages')">
+                                {{ __('Pages') }}
+                            </x-jet-dropdown-link>
+                             <x-jet-dropdown-link href="{{ route('property') }}" :active="request()->routeIs('property')">
+                                {{ __('Properties') }}
+                            </x-jet-dropdown-link>
+                             <x-jet-dropdown-link href="{{ route('settings') }}" :active="request()->routeIs('settings')">
+                                {{ __('Settings') }}
+                            </x-jet-dropdown-link>
+                             <x-jet-dropdown-link href="{{ route('sliders') }}" :active="request()->routeIs('sliders')">
+                                {{ __('Sliders') }}
+                            </x-jet-dropdown-link>
 
                 @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                     <x-jet-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">

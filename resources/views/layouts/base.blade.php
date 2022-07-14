@@ -61,7 +61,7 @@
   <div class="menu">
     <ul>
      <li><a href="/about-us">About Us</a></li>
-        <li><a href="/now-selling">Now Selling</a></li>
+       <!-- <li><a href="/now-selling">Now Selling</a></li>-->
         <li><a href="/our-projects">Our Projects</a></li>
         <li><a href="/contact-us">Contact Us</a></li>
     </ul>
@@ -77,7 +77,7 @@
     </ul>
     <address> Apple Creek, Lavington, Nairobi
     </address>
-    <h6>+254 (0)700 779 944</h6>
+    <h6>+254 722 981 125 <br/>+254 720 150 988</h6>
     <p><a href="#">hello@pyramidbuilders.co.ke</a></p>
     <ul class="social-media">
       <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -97,7 +97,7 @@
       <!-- end logo -->
       <div class="phone-email"> <img src="{{ asset('assets/user/images/icon-phone.png')}}" alt="Image">
         <h4>+254 (0)700 779 944<br/>
-            <small><a href="#">hello@pyramidbuilders.co.ke</a></small> 
+            <small><a href="#">info@pyramidbuilders.co.ke</a></small> 
         </h4>
         </div>
       <!-- end phone -->
@@ -121,40 +121,11 @@
 </nav>
 <!-- end navbar -->
 {{ $slot }}
-<!-- end certificates -->
-<section class="footer-bar">
-  <div class="container">
-    <div class="inner wow fadeIn">
-      <div class="row">
-        <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.05s">
-          <figure><img src="{{ asset('assets/user/images/footer-icon01.png')}}" alt="Image"></figure>
-          <h3>Address Infos</h3>
-          <p>P.O. Box 17575 - 00500<br>
-            Nairobi, Kenya</p>
-        </div>
-        <!-- end col-4 -->
-        <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.10s">
-          <figure><img src="{{ asset('assets/user/images/footer-icon02.png')}}" alt="Image"></figure>
-          <h3>Working Hours</h3>
-          <p>Monday to Friday <strong>09:00</strong> to <strong>18:30</strong> <br>
-            Saturday we work until <strong>15:30</strong></p>
-        </div>
-        <!-- end col-4 -->
-        <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.15s">
-          <figure><img src="{{ asset('assets/user/images/footer-icon03.png')}}" alt="Image"></figure>
-          <h3>Sales Office</h3>
-          <p>Pyramid Builders CMS Plaza Dunga <br>
-            Road, Industrial Area Nairobi, Kenya</p>
-        </div>
-        <!-- end col-4 --> 
-      </div>
-      <!-- end row --> 
-    </div>
-    <!-- end inner --> 
-  </div>
+<section class="footered">
+       @livewire('user.newsletter-component')
   <!-- end container --> 
 </section>
-<!-- end footer-bar -->
+ <!-- end mail list --> 
 <footer class="footer">
   <div class="container">
     <div class="row">
@@ -164,29 +135,27 @@
       </div>
       <!-- end col-4 -->
       <div class="col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="0.10s">
-       <!-- <ul class="footer-menu">
-          <li><a href="#">Homepark</a></li>
-          <li><a href="#">Apartments</a></li>
-          <li><a href="#">Facilities</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>-->
+         <div class="contact-box">
+          <h5>Address Infos</h5>
+          <p>P.O. Box 17575 - 00500<br>
+            Nairobi, Kenya</p>
+        </div>
+        <!-- end contact-box --> 
       </div>
       <!-- end col-2 -->
       <div class="col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="0.15s">
-       <!-- <ul class="footer-menu">
-          <li><a href="#">Suites</a></li>
-          <li><a href="#">Apartments</a></li>
-          <li><a href="#">Villas & Houses</a></li>
-          <li><a href="#">Butique Room</a></li>
-          <li><a href="#">Buildings</a></li>
-        </ul>-->
+        <div class="contact-box">
+          <h5>Sales Office</h5>
+          <p>Pyramid Builders CMS Plaza Dunga <br>
+            Road, Industrial Area Nairobi, Kenya</p>
+        </div>
+        <!-- end contact-box --> 
       </div>
       <!-- end col-2 -->
       <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.20s">
         <div class="contact-box">
           <h5>CALL CENTER</h5>
-          <h3>+254 722 981 125 /<br/>+254 720 150 988</h3>
+          <h3>+254 722 981 125 <br/>+254 720 150 988</h3>
           <p><a href="#">info@pyramidbuilders.co.ke</a></p>
           <ul>
             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
