@@ -37,6 +37,10 @@
 									<div class="content-details fadeIn-bottom">
 										<h3 class="content-title">{{ $project->name }}</h3>
 										<p class="content-text">{{ Str::limit($project->desc, 700) }}</p>
+										@if ($project->disable == 'inactive')
+										@else
+										<a href="{{ route('projects.detail',['slug'=>$project->slug]) }}" class="content-link">View project <i class="fas fa-caret-right"></i></a>
+										@endif
 									</div>
 									</a>
 								</div>
@@ -74,6 +78,10 @@
 										<div class="content-details fadeIn-bottom">
 											<h3 class="content-title">{{ $project->name }}</h3>
 											<p class="content-text">{{ Str::limit($project->desc, 500,'') }}</p>
+											@if ($project->disable == 'inactive')
+											@else
+											<a href="{{ route('projects.detail',['slug'=>$project->slug]) }}" class="content-link">View project <i class="fas fa-caret-right"></i></a>
+											@endif
 										</div>
 										</a>
 									</div>

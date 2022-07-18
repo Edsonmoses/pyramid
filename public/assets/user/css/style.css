@@ -3104,7 +3104,7 @@ a {
     line-height: 42px;
     font-size: 13px;
     color: #fff;
-    background: rgba(255, 255, 255, 0.1);
+    /*background: rgba(255, 255, 255, 0.1);*/
 }
 .footer .contact-box ul li a:hover {
     color: #26282b;
@@ -3158,7 +3158,7 @@ a {
 @media only screen and (max-width: 991px),
     only screen and (max-device-width: 991px) {
     .side-navigation .side-content {
-        display: none;
+        display: block;
     }
 
     .side-navigation .menu {
@@ -3860,19 +3860,27 @@ a {
     letter-spacing: 0.15em;
     margin-bottom: 0.5em;
     text-transform: uppercase;
+    margin-left: 25px;
 }
 
 .content-details p {
     color: #fff;
     font-size: 0.8em;
     text-align: left;
+    margin-left: 25px;
+}
+.content-details a {
+    color: #fff;
+    font-size: 1.5em;
+    text-align: left;
+    margin-left: 25px;
 }
 .overtext {
     color: white !important;
     font-size: 20px;
     position: absolute;
-    top: 88%;
-    left: 121px;
+    top: 84%;
+    left: 110px;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: left;
@@ -3880,17 +3888,22 @@ a {
 .overtext h3 {
     color: white !important;
     text-align: left;
+    margin-left: 25px;
 }
 .content:hover .overtext h3 {
-    color: white !important;
-    text-align: left;
     display: none;
 }
 .overtext a {
     color: white !important;
     text-align: left;
     text-decoration: none;
+    margin-left: 25px;
+    text-decoration: none;
 }
+.content:hover .overtext a {
+    display: none;
+}
+
 .img-overlay {
     position: absolute;
     top: 0;

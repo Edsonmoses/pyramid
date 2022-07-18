@@ -128,26 +128,19 @@
         <!-- end select-box --> 
       </div>
       <!-- end col-4 -->
-      <div class="col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="0.10s">
+      <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.10s">
          <div class="contact-box">
-          <h5>Address Infos</h5>
+          <h5>Address</h5>
+          <p>1st Floor, Woodridge Center, <br/>Wood Avenue, KIlimani</p>
           <p>P.O. Box 17575, Enterprise - Rd <br/>
              00500 Nairobi, Kenya</p>
         </div>
         <!-- end contact-box --> 
       </div>
-      <!-- end col-2 -->
-      <div class="col-lg-2 col-md-6 wow fadeInUp" data-wow-delay="0.15s">
-        <div class="contact-box">
-          <h5>Offices</h5>
-          <p>Pyramid Builders,1st Floor, Woodridge Center, Wood Avenue, KIlimani</p>
-        </div>
-        <!-- end contact-box --> 
-      </div>
-      <!-- end col-2 -->
+      <!-- end col-4 -->
       <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.20s">
         <div class="contact-box">
-          <h5>CALL CENTER</h5>
+          <h5>Phone Number</h5>
           <h3>+254 722 981 125 <br/>+254 720 150 988</h3>
           <p><a href="#">info@pyramidbuilders.co.ke</a></p>
           <ul>
