@@ -154,7 +154,7 @@
         <!-- end contact-box --> 
       </div>
       <!-- end col-4 -->
-      <div class="col-12"> <span class="copyright">© {{ now()->year }} Pyramid Developers</span> <span class="creation">Site created by <a href="#">ovakast</a></span> </div>
+      <div class="col-12"> <span class="copyright">© {{ now()->year }} Pyramid Builders</span> <span class="creation">Site created by <a href="https://ovakast.com"><img src="{{ asset('assets/user/images/logo_W.png')}}" alt="ovakast" class="logo"></a></span> </div>
       <!-- end col-12 --> 
     </div>
     <!-- end row --> 
