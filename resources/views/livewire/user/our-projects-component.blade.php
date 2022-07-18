@@ -5,7 +5,7 @@
 	</div>
 	<!-- end container -->
 </header>
-<section class="blog" style="padding: 0px !important">
+<section class="blog" style="padding: 0px 0px 150px 0px !important">
 
   <div class="container">
 		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">

@@ -64,7 +64,7 @@
     <figure> <img src="{{ asset('assets/user/images/logo-light.png')}}" alt="Image"> </figure>
      <div class="menu">
     <ul>
-     <li><a href="/about-us">About Us</a></li>
+     <li><a href="/about-us">About</a></li>
        <!-- <li><a href="/now-selling">Now Selling</a></li>-->
         <li><a href="/our-projects">Projects</a></li>
         <li><a href="/contact-us">Contact</a></li>
@@ -103,10 +103,10 @@
     <!-- end upper-side -->
     <div class="menu">
       <ul style="display: none">
-        <li><a href="/about-us">About Us</a></li>
+        <li><a href="/about-us">About</a></li>
        <!-- <li><a href="/now-selling">Now Selling</a></li>-->
         <li><a href="/our-projects">Projects</a></li>
-        <li><a href="/contact-us">Contact Us</a></li>
+        <li><a href="/contact-us">Contact</a></li>
       </ul>
     </div>
     <!-- end menu --> 
