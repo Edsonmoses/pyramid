@@ -9,23 +9,27 @@ class SingleProjectComponent extends Component
 {
     public $slug;
     public $download;
+    public $downloadCount;
 
     public function mount($slug)
     {
         $this->slug = $slug;
     }
-    public function downloadFile()
-
+    public function export($id)
     {
+        $project = Project::where('id', $id)->firstOrFail();
 
-        $myFile = public_path("dummy_pdf.pdf");
+        $project = Project::find($id);
+        if ($project->downloadCount == 0 || $project->downloadCount == '') {
+            $project->downloadCount = $this->downloadCount + 1;
+        } else {
+            $project->downloadCount += 1;
+        }
+        $project->save();
 
-        $headers = ['Content-Type: application/pdf'];
-
-        $newName = 'itsolutionstuff-pdf-file-' . time() . '.pdf';
-
-
-        return response()->download($myFile, $newName, $headers);
+        $download_path = (public_path() . '/assets/user/images/' . $project->download);
+        return (response()->download($download_path));
+        //return(redirect(request()->header('Referer')) );
     }
     public function render()
     {

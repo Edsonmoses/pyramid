@@ -17,6 +17,8 @@ class AdminProjectsComponent extends Component
         $statsub, $gallery, $floorplan, $fimage, $download, $downloadCount, $project_id, $disable;
     public $isModalOpen = 0;
     public $editModalOpen = 0;
+    public $selectedRows = [];
+    public $selectPageRows = false;
 
     /**
      * The attributes that are mass assignable.
@@ -268,7 +270,21 @@ class AdminProjectsComponent extends Component
         $project->save();
         session()->flash('message', 'Project Activated Successfully.');
     }
-    public function export($id)
+    public function unPublish($id)
+    {
+        $project = Project::find($id);
+        $project->off = 'hide';
+        $project->save();
+        session()->flash('message', 'Project Deactivated Successfully.');
+    }
+    public function Publish($id)
+    {
+        $project = Project::find($id);
+        $project->off = 'show';
+        $project->save();
+        session()->flash('message', 'Project Activated Successfully.');
+    }
+    public function exports($id)
     {
         $project = Project::where('id', $id)->firstOrFail();
 
@@ -284,9 +300,44 @@ class AdminProjectsComponent extends Component
         return (response()->download($download_path));
         //return(redirect(request()->header('Referer')) );
     }
+    public function updateProjectOrder($items)
+    {
+        foreach ($items as $item) {
+            Project::find($item['value'])->update(['order_position' => $item['order']]);
+
+            session()->flash('message', 'Project has been Sorted Successfully.');
+        }
+    }
+    public function markAllAsScheduled()
+    {
+        Project::whereIn('id', $this->selectedRows)->update(['disable' => Project::active]);
+
+        $this->dispatchBrowserEvent('updated', ['message' => 'Appointments marked as scheduled']);
+
+        $this->reset(['selectPageRows', 'selectedRows']);
+    }
+
+    public function markAllAsClosed()
+    {
+        Project::whereIn('id', $this->selectedRows)->update(['disable' => Project::inactive]);
+
+        $this->dispatchBrowserEvent('updated', ['message' => 'Appointments marked as closed.']);
+
+        $this->reset(['selectPageRows', 'selectedRows']);
+    }
+
+    public function deleteSelectedRows()
+    {
+        Project::whereIn('id', $this->selectedRows)->delete();
+
+        $this->dispatchBrowserEvent('deleted', ['message' => 'All selected appointment got deleted.']);
+
+        $this->reset(['selectPageRows', 'selectedRows']);
+    }
+
     public function render()
     {
-        $this->project = Project::all();
+        $this->project = Project::orderBy('order_position')->get();
         return view('livewire.admin.admin-projects-component');
     }
 }

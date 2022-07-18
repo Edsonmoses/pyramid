@@ -126,16 +126,17 @@
 </header>
     <!--end floor plans-->
 </section>
-<section class="big-image" style="background:  url('{{ asset('assets/user/images')}}/{{ $project->fimage }}')" >
+<section class="big-image mb-5">
+  <img src="{{ asset('assets/user/images')}}/{{ $project->fimage }}" alt="Image">
   <div class="container">
     <!-- end row --> 
   </div>
   <!-- end container --> 
 </section>
-<section class="downloads mb-5">
+<section class="downloads mb-5 mt-10">
   <div class="container">
-   <a href="{{ asset('assets/user/images')}}/{{ $project->download }}" download="{{ $project->name }}.pdf"> 
-        <img src="{{ asset('assets/user/images/arrow.png')}}" alt="Image">
+   <a href="#" wire:click.prevent="export({{$project->id}})"> 
+        <img src="{{ asset('assets/user/images/arrow.png')}}" alt="{{$project->name}}">
         <p>VIEW BROCHURE</p>
     </a>
     <!-- end row --> 

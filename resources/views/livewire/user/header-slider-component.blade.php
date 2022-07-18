@@ -17,8 +17,8 @@
       <!-- end swiper-slide -->
       <div class="swiper-slide" data-background="{{ asset('assets/user/images/TendeRidge.jpg')}}" data-stellar-background-ratio="1.15">
         <div class="container">
-          <h1><span>Pyramid</span> Tende Ridge</h1>
-          <h2>Kanjata RoadO – Lavington </h2>
+          <h1><span>Pyramid</span> Ridge</h1>
+          <h2>Kanjata Road – Lavington </h2>
            <div class="item">
                 <a href="https://pyramid-alfa.ovakast.com/projects-detail/tende-ridge">
                     <p class="label success new-label"><span class="align">Now Selling <i class="fas fa-caret-right"></i></span></p>
@@ -38,7 +38,7 @@
         <!-- end button-prev -->
         <div class="button-next">NEXT</div>
         <!-- end button-next -->
-        <div class="social-media">
+        <!--<div class="social-media">
           <h6>SOCIAL MEDIA</h6>
           <ul>
             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -46,7 +46,7 @@
             <li><a href="#"><i class="fab fa-google"></i></a></li>
             <li><a href="#"><i class="fab fa-youtube"></i></a></li>
           </ul>
-        </div>
+        </div>-->
         <!-- end social-media --> 
       </div>
       <!-- end container --> 

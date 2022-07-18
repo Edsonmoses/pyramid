@@ -594,7 +594,7 @@ button[type="submit"] {
     -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
 }
 .side-navigation .menu {
-    display: none;
+    display: block;
     margin-bottom: 20px;
 }
 .side-navigation .menu ul {
@@ -625,7 +625,7 @@ button[type="submit"] {
 .side-navigation .menu ul li a {
     display: inline-block;
     color: #fff;
-    font-size: 3vw;
+    font-size: 2vw;
     font-weight: 600;
 }
 .side-navigation .menu ul li a:hover {
@@ -3066,7 +3066,7 @@ a {
 .footer .contact-box {
     float: right;
     color: #fff;
-    text-align: right;
+    text-align: left;
 }
 .footer .contact-box h5 {
     margin-bottom: 10px;
@@ -3756,7 +3756,7 @@ a {
 }
 .big-image {
     height: 600px;
-    margin: -56px 0 10px 0;
+    margin: -56px 0 10% 0 !important;
 }
 /**Image Overlay Hover Effects**/
 .main-title {
@@ -3828,7 +3828,7 @@ a {
 
 .content-details {
     position: absolute;
-    text-align: center;
+    text-align: left;
     padding-left: 1em;
     padding-right: 1em;
     width: 100%;
@@ -3931,5 +3931,14 @@ a {
     font-size: 18px;
     text-transform: uppercase;
     margin-bottom: 0px;
+}
+/**tabs**/
+.nav-pills .nav-item .nav-link.active {
+    border-bottom: 2px solid #ebcfa7;
+    color: #ebcfa7;
+}
+.nav-pills .nav-item .nav-link:hover {
+    border-bottom: 2px solid #ebcfa7;
+    color: #ebcfa7;
 }
 /*# sourceMappingURL=style.css.map */
