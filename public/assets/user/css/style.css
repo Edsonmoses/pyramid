@@ -3755,8 +3755,13 @@ a {
     line-height: 1;
 }
 .big-image {
-    height: 600px;
-    margin: -56px 0 10% 0 !important;
+    height: 800px;
+    margin: -56px 0 10px 0 !important;
+}
+.big-image img {
+    height: 800px;
+    width: 100%;
+    object-fit: cover;
 }
 /**Image Overlay Hover Effects**/
 .main-title {
