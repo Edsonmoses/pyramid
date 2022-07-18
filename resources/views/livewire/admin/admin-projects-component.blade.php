@@ -75,7 +75,8 @@
                 <th>No.</th>
                 <th>Title</th>
                 <th>Description</th>
-                <th colspan="2">Action</th>
+                <th>Action</th>
+                <th>Disable View Project Link</th>
                 <th>Un/Publish</th>
             </tr>
         </thead>

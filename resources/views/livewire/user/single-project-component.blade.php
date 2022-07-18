@@ -23,7 +23,7 @@
        <!-- end col-3 -->
        <div class="col-md-3 text-align-center leftCont">
         <h6 style="color: #C8773D !important; border-right: 1px solid #C8773D !important;">5</h6>
-        <p>BEDROOMS <br/>ALL ENSUITE<br/><span>GUESTROOM <br/>INCLUDED</span> </p>
+        <p>BEDROOMS <br/>ALL ENSUITE<br/><span>GUESTROOM INCLUDED</span> </p>
        </div>
        <!-- end col-3 -->
        <div class="col-md-3 text-align-center leftCont">
@@ -45,7 +45,7 @@
        <!-- end col-3 -->
        <div class="col-md-3 text-align-center leftCont">
         <h6>5</h6>
-        <p>BEDROOMS <br/>ALL ENSUITE<br/><span>GUESTROOM <br/>INCLUDED</span> </p>
+        <p>BEDROOMS <br/>ALL ENSUITE<br/><span>GUESTROOM INCLUDED</span> </p>
        </div>
        <!-- end col-3 -->
        <div class="col-md-3 text-align-center leftCont">
