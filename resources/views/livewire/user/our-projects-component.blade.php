@@ -10,20 +10,24 @@
   <div class="container">
 		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 		<li class="nav-item">
-			<a class="nav-link" id="pills-ongoing-tab" data-toggle="pill" href="#pills-ongoing" role="tab" aria-controls="pills-ongoing" aria-selected="false">On-going</a>
+			<a class="nav-link active" id="pills-nowselling-tab" data-toggle="pill" href="#pills-nowselling" role="tab" aria-controls="pills-nowselling" aria-selected="true">Now Selling</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link active" id="pills-completed-tab" data-toggle="pill" href="#pills-completed" role="tab" aria-controls="pills-completed" aria-selected="true">Completed</a>
+			<a class="nav-link" id="pills-completed-tab" data-toggle="pill" href="#pills-completed" role="tab" aria-controls="pills-completed" aria-selected="false">Completed</a>
 		</li>
 		</ul>
 		<div class="tab-content" id="pills-tabContent">
-		<div class="tab-pane fade" id="pills-ongoing" role="tabpanel" aria-labelledby="pills-ongoing-tab">
+		<div class="tab-pane fade show active" id="pills-nowselling" role="tabpanel" aria-labelledby="pills-nowselling-tab">
 			 <div class="row">
 						@foreach ($projects as $project )
-						  @if ($project->status == 'ongoing')
+						  @if ($project->status == 'nowselling')
 							<div class="col-lg-4 overlay-container">
 								<div class="content">
+									@if ($project->disable == 'inactive')
+									<a href="#" target="_self">
+									@else
 									<a href="{{ route('projects.detail',['slug'=>$project->slug]) }}" target="_self">
+										@endif
 									<div class="content-overlay"></div>
 									<div class="img-overlay "></div>
 									<img class="content-image" src="{{ asset('assets/user/images')}}/{{ $project->image }}">
@@ -48,7 +52,7 @@
 							@else
 							@if($loop->first)
 							<div class="col-md-12">
-								<p style="text-align: center;"><strong> No on-going projects</strong></p>
+								<p style="text-align: center;"><strong> No now selling projects</strong></p>
 							</div>
 							@endif
 					   @endif
@@ -58,13 +62,17 @@
 				</div>
 				<!-- end row -->
 		</div>
-		<div class="tab-pane fade show active" id="pills-completed" role="tabpanel" aria-labelledby="pills-completed-tab">
+		<div class="tab-pane fade" id="pills-completed" role="tabpanel" aria-labelledby="pills-completed-tab">
 			 <div class="row">
 						@foreach ($projects as $project )
 							@if ($project->status == 'completed')
 								<div class="col-lg-4 overlay-container">
 									<div class="content">
-										<a href="{{ route('projects.detail',['slug'=>$project->slug]) }}" target="_self">
+										@if ($project->disable == 'inactive')
+									<a href="#" target="_self">
+									@else
+									<a href="{{ route('projects.detail',['slug'=>$project->slug]) }}" target="_self">
+										@endif
 										<div class="content-overlay"></div>
 										<div class="img-overlay "></div>
 										<img class="content-image" src="{{ asset('assets/user/images')}}/{{ $project->image }}">

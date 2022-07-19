@@ -2983,7 +2983,7 @@ a {
     color: #fff;
 }
 .footer .logo {
-    height: 41px;
+    height: 20px;
     margin-bottom: 15px;
 }
 .footer .logo img {
@@ -3425,6 +3425,9 @@ a {
 /* RESPONSIVE MOBILE FIXES */
 @media only screen and (max-width: 767px),
     only screen and (max-device-width: 767px) {
+    .page-header {
+        height: 250px;
+    }
     .side-navigation {
         width: 80vw;
     }
@@ -3519,7 +3522,8 @@ a {
 
     .footer .col-12 .creation {
         float: left;
-        margin-top: 5px;
+        margin-top: 0px;
+        float: right;
     }
 }
 .navbar .container .upper-side .language2 {

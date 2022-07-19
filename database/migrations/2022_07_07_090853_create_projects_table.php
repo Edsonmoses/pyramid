@@ -29,7 +29,7 @@ class CreateProjectsTable extends Migration
             $table->string('download')->nullable();
             $table->string('downloadCount')->nullable()->default('0');
             $table->enum('disable', ['active', 'inactive'])->default('active');
-            $table->enum('status', ['ongoing', 'completed'])->default('completed');
+            $table->enum('status', ['nowselling', 'completed'])->default('completed');
             $table->enum('off', ['show', 'hide'])->default('show');
             $table->timestamps();
         });

@@ -31,7 +31,7 @@
 <link href="{{ asset('assets/user/ico/apple-touch-icon-114-precomposed.png')}}" rel="apple-touch-icon" sizes="114x114">
 <link href="{{ asset('assets/user/ico/apple-touch-icon-72-precomposed.png')}}" rel="apple-touch-icon" sizes="72x72">
 <link href="{{ asset('assets/user/ico/apple-touch-icon-57-precomposed.png')}}" rel="apple-touch-icon">
-<link href="{{ asset('assets/user/ico/favicon.jpg" rel="shortcut icon')}}">
+<link href="{{ asset('assets/user/ico/favicon.jpg')}}" rel="shortcut icon">
 
 <!-- CSS FILES -->
 <link rel="stylesheet" href="{{ asset('assets/user/css/fontawesome.min.css')}}">
@@ -48,7 +48,7 @@
   <div class="layer"></div>
   <!-- end layer -->
   <div class="inner">
-    <figure><img src="{{ asset('assets/user/images/preloader.gif')}}" alt="Image"></figure>
+    <figure><img src="{{ asset('assets/user/images/preloader.gif')}}" alt="pyramid builders logo"></figure>
     <p><span class="text-rotater" data-text="Pyramid Builders | Elements | Loading">Loading</span></p>
   </div>
   <!-- end inner --> 
@@ -61,7 +61,7 @@
 <div class="side-navigation">
   <!-- end menu -->
   <div class="side-content">
-    <figure> <img src="{{ asset('assets/user/images/logo-light.png')}}" alt="Image"> </figure>
+    <figure> <img src="{{ asset('assets/user/images/logo-light.png')}}" alt="pyramid builders logo"> </figure>
      <div class="menu">
     <ul>
      <li><a href="/about-us">About</a></li>
@@ -87,10 +87,10 @@
 <nav class="navbar">
   <div class="container">
     <div class="upper-side">
-      <div class="logo"> <a href="/"><img src="{{ asset('assets/user/images/logo-light.png')}}" alt="Image"></a> </div>
+      <div class="logo"> <a href="/"><img src="{{ asset('assets/user/images/logo-light.png')}}" alt="pyramid builders logo"></a> </div>
       <!-- end logo -->
       <div class="phone-email"> <i class="fab fa-whatsapp" style="margin:0 0 0 10px; font-size:32px; float: right;"></i>
-        <h4 style="float: left;">+254 (0)700 779 944<br/>
+        <h4 style="float: left;">+254 700 779 944<br/>
             <small><a href="#">info@pyramidbuilders.co.ke</a></small> 
         </h4>
         </div>
@@ -123,7 +123,7 @@
 <footer class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.05s"> <img src="{{ asset('assets/user/images/logo-light.png')}}" alt="Image" class="logo">
+      <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.05s"> <img src="{{ asset('assets/user/images/logo-light.png')}}" alt="pyramid builders logo" class="logo">
         <p>Whether you are entertaining guests or just want to spend a day in the comfortable luxury of your home, each space in our homes is designed to create lasting impressions that will be appreciated for generations.</p>
         <!-- end select-box --> 
       </div>
@@ -154,7 +154,7 @@
         <!-- end contact-box --> 
       </div>
       <!-- end col-4 -->
-      <div class="col-12"> <span class="copyright">© {{ now()->year }} Pyramid Builders</span> <span class="creation">Site created by <a href="https://ovakast.com"><img src="{{ asset('assets/user/images/logo_W.png')}}" alt="ovakast" class="logo"></a></span> </div>
+      <div class="col-12"> <span class="copyright">© {{ now()->year }} Pyramid Builders</span> <span class="creation"><a href="https://ovakast.com"><img src="{{ asset('assets/user/images/logo_W.png')}}" alt="ovakast" class="logo"></a></span> </div>
       <!-- end col-12 --> 
     </div>
     <!-- end row --> 
