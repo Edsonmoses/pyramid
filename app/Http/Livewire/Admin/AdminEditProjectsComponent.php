@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire\Admin;
 
+use App\Models\Features;
 use Carbon\Carbon;
 use App\Models\Project;
 use Livewire\Component;
@@ -15,7 +16,35 @@ class AdminEditProjectsComponent extends Component
 
     public $title, $name, $slug, $image, $newimage, $desc, $statno, $statname,
         $statsub, $gallery,  $newgallery, $floorplan, $newfloorplan, $fimage, $newfimage,
-        $download, $newdownload, $project_id;
+        $download, $newdownload, $project_id, $hbcolor;
+
+    public $updateMode = false;
+    public $inputs = [];
+    public $i = 1;
+
+    /**
+     * Write code on Method
+     * @return response()
+     */
+
+    public function add($i)
+
+    {
+        $i = $i + 1;
+        $this->i = $i;
+        array_push($this->inputs, $i);
+    }
+
+    /**
+
+     * Write code on Method
+     * @return response()
+     */
+
+    public function remove($i)
+    {
+        unset($this->inputs[$i]);
+    }
 
     public function mount($slug)
     {
@@ -80,9 +109,13 @@ class AdminEditProjectsComponent extends Component
             'slug' => 'required',
             //'image' => 'required|mimes:png,jpg,jpeg',
             'desc' => 'required',
-            'statno' => 'required ',
-            'statname' => 'required',
-            'statsub' => 'required ',
+            //'hbcolor' => 'required',
+            'statno.0' => 'required ',
+            'statname.0' => 'required',
+            'statsub.0' => 'required ',
+            'statno.*' => 'required ',
+            'statname.*' => 'required',
+            'statsub.*' => 'required ',
             // 'fimage' => 'required|mimes:png,jpg,jpeg',
         ]);
         $project = Project::find($this->project_id);
@@ -184,6 +217,15 @@ class AdminEditProjectsComponent extends Component
             }
             $project->floorplan = $imagefsname;
         }
+        foreach ($this->statname as $key => $value) {
+
+            Features::create([
+                'statno' => $this->statno[$key],
+                'statname' => $this->statname[$key],
+                'statsub' => $this->statsub[$key],
+            ]);
+        }
+        $this->inputs = [];
         $project->save();
         session()->flash(
             'message',

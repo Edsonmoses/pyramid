@@ -2,31 +2,20 @@
    <header class="slider">
   <div class="slider-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" data-background="{{ asset('assets/user/images/28AppleCross.jpg')}}" data-stellar-background-ratio="1.15">
+      @foreach($slider as $value)
+      <div class="swiper-slide" data-background="{{ asset('assets/user/images')}}/{{ $value->image }}" data-stellar-background-ratio="1.15">
         <div class="container">
-          <h1><span>Pyramid </span> 28 Apple Cross</h1>
-          <h2>28 Apple Cross – Lavington</h2>
+          <h1>{!! $value->name !!}</h1>
+          <h2>{!! $value->location !!}</h2>
             <div class="item">
-                <a href="https://pyramid-alfa.ovakast.com/projects-detail/apple-creek">
-                    <p class="label success new-label"><span class="align">Now Selling <i class="fas fa-caret-right"></i></span></p>
+                <a href="https://pyramid-alfa.ovakast.com/projects-detail/{{ $value->url }}">
+                    <p class="label success new-label"><span class="align">{{ $value->btname }} <i class="fas fa-caret-right"></i></span></p>
                 </a>
             </div>
         </div>
         <!-- end container --> 
       </div>
-      <!-- end swiper-slide -->
-      <div class="swiper-slide" data-background="{{ asset('assets/user/images/TendeRidge.jpg')}}" data-stellar-background-ratio="1.15">
-        <div class="container">
-          <h1><span>Pyramid</span> Ridge</h1>
-          <h2>Kanjata Road – Lavington </h2>
-           <div class="item">
-                <a href="https://pyramid-alfa.ovakast.com/projects-detail/tende-ridge">
-                    <p class="label success new-label"><span class="align">Now Selling <i class="fas fa-caret-right"></i></span></p>
-                </a>
-            </div>
-        </div>
-        <!-- end container --> 
-      </div>
+      @endforeach
       <!-- end swiper-slide -->
     </div>
     <!-- Add Pagination -->

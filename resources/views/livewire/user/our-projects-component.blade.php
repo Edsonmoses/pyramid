@@ -49,12 +49,6 @@
 									</a>
 								</div>
 							</div>
-							@else
-							@if($loop->first)
-							<div class="col-md-12">
-								<p style="text-align: center;"><strong> No now selling projects</strong></p>
-							</div>
-							@endif
 					   @endif
 					@endforeach
 					<!-- end post -->
@@ -94,12 +88,6 @@
 										</a>
 									</div>
 								</div>
-								@else
-								@if($loop->first)
-								<div class="col-md-12">
-									<p style="text-align: center;"><strong> No completed projects</strong></p>
-								</div>
-								@endif
 							@endif
 					@endforeach
 					<!-- end post -->

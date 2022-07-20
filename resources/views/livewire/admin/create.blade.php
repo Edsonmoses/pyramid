@@ -36,26 +36,14 @@
                             <textarea  rows="4" cols="50" class="form-control" id="desc" placeholder="Enter desc" wire:model="desc"></textarea>
                             @error('desc') <span class="text-danger">{{ $message }}</span>@enderror
                         </div>
-                        <br/>
-                        <div class="form-group">
-                            <label for="statno">statno</label>
-                            <input type="text" class="form-control" id="statno" placeholder="Enter statno" wire:model="statno"/>
-                            @error('statno') <span class="text-danger">{{ $message }}</span>@enderror
-                        </div>
                     </div>
                     <div class="col-md-6">
-                         <div class="form-group">
-                            <label for="statname">statname</label>
-                            <input type="text" class="form-control" id="statname" placeholder="Enter statname" wire:model="statname"/>
-                            @error('statname') <span class="text-danger">{{ $message }}</span>@enderror
-                        </div>
-                        <br/>
                         <div class="form-group">
-                            <label for="statsub">statsub</label>
-                            <input type="text" class="form-control" id="statsub" placeholder="Enter statsub" wire:model="statsub"/>
-                            @error('statsub') <span class="text-danger">{{ $message }}</span>@enderror
+                            <label for="hbcolor">Border & Number color</label>
+                            <input type="text" class="form-control" id="hbcolor" placeholder="Enter Border & Number color" wire:model="hbcolor"/>
+                            @error('hbcolor') <span class="text-danger">{{ $message }}</span>@enderror
                         </div>
-                        <br/>
+                         <br/>
                         <div class="form-group">
                             <label for="gallery">gallery</label>
                             <input type="file" class="form-control" id="gallery" placeholder="Enter gallery" wire:model="gallery" multiple/>
@@ -95,6 +83,72 @@
                             <input type="file" class="form-control" id="download" placeholder="Enter download" wire:model="download"/>
                             @error('download') <span class="text-danger">{{ $message }}</span>@enderror
                         </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="statno.0">statno</label>
+                                    <input type="text" class="form-control" id="statno.0" placeholder="Enter statno" wire:model="statno.0"/>
+                                    @error('statno.0') <span class="text-danger">{{ $message }}</span>@enderror
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                 <div class="form-group">
+                                    <label for="statname.0">statname</label>
+                                    <input type="text" class="form-control" id="statname.0" placeholder="Enter statname" wire:model="statname.0"/>
+                                    @error('statname.0') <span class="text-danger">{{ $message }}</span>@enderror
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="statsub.0">statsub</label>
+                                    <input type="text" class="form-control" id="statsub.0" placeholder="Enter statsub" wire:model="statsub.0"/>
+                                    @error('statsub.0') <span class="text-danger">{{ $message }}</span>@enderror
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                 <div class="form-group">
+                                    <label for="btn"></label>
+                                    <button class="btn text-white btn-info btn-sm mt-4" wire:click.prevent="add({{$i}})">Add</button>
+                                 </div>
+                            </div>
+                            <!--row end-->
+                        </div>
+                        @foreach($inputs as $key => $value)
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="statno.0">statno</label>
+                                        <input type="text" class="form-control" id="statno.0" placeholder="Enter statno" wire:model="statno.{{ $value }}"/>
+                                        @error('statno.'.$value) <span class="text-danger">{{ $message }}</span>@enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="statname.0">statname</label>
+                                        <input type="text" class="form-control" id="statname.0" placeholder="Enter statname" wire:model="statname.{{ $value }}"/>
+                                        @error('statname.'.$value) <span class="text-danger">{{ $message }}</span>@enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="statsub.0">statsub</label>
+                                        <input type="text" class="form-control" id="statsub.0" placeholder="Enter statsub" wire:model="statsub.{{ $value }}"/>
+                                        @error('statsub.'.$value) <span class="text-danger">{{ $message }}</span>@enderror
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="btn"></label>
+                                        <button class="btn btn-danger btn-sm mt-4" wire:click.prevent="remove({{$key}})">Remove</button>
+                                    </div>
+                                </div>
+                                <!--row end-->
+                            </div>
+                        </div>
+                       @endforeach
                     </div>
                      <!--row end-->
                 </div>

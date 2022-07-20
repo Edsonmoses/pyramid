@@ -20,9 +20,7 @@ class CreateProjectsTable extends Migration
             $table->string('slug')->unique();
             $table->string('image')->nullable();
             $table->longText('desc');
-            $table->string('statno')->nullable();
-            $table->string('statname')->nullable();
-            $table->string('statsub')->nullable();
+            $table->string('hbcolor')->default('null');
             $table->string('gallery')->nullable();
             $table->string('floorplan')->nullable();
             $table->string('fimage')->nullable();

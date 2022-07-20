@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class feature extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'statno', 'statname', 'statsub'
+    ];
 }

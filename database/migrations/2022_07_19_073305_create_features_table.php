@@ -15,10 +15,10 @@ class CreateFeaturesTable extends Migration
     {
         Schema::create('features', function (Blueprint $table) {
             $table->id();
-            $table->string('hbcolor')->default('null');
-            $table->string('number')->default('null');
-            $table->string('desc')->default('null');
-            $table->string('subdesc')->default('null');
+            $table->string('statno')->default('null');
+            $table->string('statname')->default('null');
+            $table->string('statslug')->default('null');
+            $table->string('statsub')->default('null');
             $table->timestamps();
         });
     }

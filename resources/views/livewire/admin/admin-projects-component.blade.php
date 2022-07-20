@@ -46,22 +46,6 @@
                 class="btn btn-success">
                 Create Project
             </button>
-     @if ($selectedRows)
-            <div class="btn-group ml-2">
-                <button type="button" class="btn btn-default">Bulk Actions</button>
-                <button type="button" class="btn btn-default dropdown-toggle dropdown-icon" data-toggle="dropdown">
-                    <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <div class="dropdown-menu" role="menu">
-                    <a wire:click.prevent="deleteSelectedRows" class="dropdown-item" href="#">Delete Selected</a>
-                    <a wire:click.prevent="markAllAsScheduled" class="dropdown-item" href="#">Mark as Scheduled</a>
-                    <a wire:click.prevent="markAllAsClosed" class="dropdown-item" href="#">Mark as Closed</a>
-                    <a wire:click.prevent="export" class="dropdown-item" href="#">Export</a>
-                </div>
-            </div>
-
-            <span class="ml-2">selected {{ count($selectedRows) }} {{ Str::plural('appointment', count($selectedRows)) }}</span>
-      @endif
     <table class="table table-bordered mt-5">
         <thead>
             <tr>

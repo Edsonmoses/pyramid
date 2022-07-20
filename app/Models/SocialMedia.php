@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class SocialMedia extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'title', 'name', 'slug', 'image', 'desc', 'statno', 'statname',
+        'statsub', 'gallery', 'floorplan', 'fimage', 'download'
+    ];
 }

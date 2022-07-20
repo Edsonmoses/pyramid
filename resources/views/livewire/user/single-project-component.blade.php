@@ -15,45 +15,45 @@
         </div>--}}
         <!-- end col-12 -->
         @if ($project->slug == 'tende-ridge')
-       <div class="col-md-3 text-align-center leftCont">
+       <div class="col-md-3 col-sm-12 text-align-center leftCont">
          <h6 style="color: #C8773D !important; border-right: 1px solid #C8773D !important;">6</h6>
         <p>CONTEMPORARY DESIGNED TOWNHOUSES <span></span></p>
        
        </div>
        <!-- end col-3 -->
-       <div class="col-md-3 text-align-center leftCont">
+       <div class="col-md-3 col-sm-12 text-align-center leftCont">
         <h6 style="color: #C8773D !important; border-right: 1px solid #C8773D !important;">5</h6>
         <p>BEDROOMS <br/>ALL ENSUITE<br/><span>GUESTROOM INCLUDED</span> </p>
        </div>
        <!-- end col-3 -->
-       <div class="col-md-3 text-align-center leftCont">
+       <div class="col-md-3 col-sm-12 text-align-center leftCont">
         <h6 style="color: #C8773D !important; border-right: 1px solid #C8773D !important;">1</h6>
         <p>SELF<br/>CONTAINED <br/>DSQs</p>
        </div>
        <!-- end col-3 -->
-       <div class="col-md-3 text-align-center leftCont">
+       <div class="col-md-3 col-sm-12 col-sm-12 text-align-center leftCont">
         <h6 style="color: #C8773D !important; border-right: 1px solid #C8773D !important;">1</h6>
         <p>EXCLUSIVE<br/> GATED LOCATION <br/><span>KANJATA ROAD, LAVINGTON</span></p>
         
        </div>
        @else
-        <div class="col-md-3 text-align-center leftCont">
+        <div class="col-md-3 col-sm-12 text-align-center leftCont">
          <h6>9</h6>
         <p>MASTERFULLY DESIGNED TOWNHOUSES <span>MEDITERRANEAN STYLE</span></p>
        
        </div>
        <!-- end col-3 -->
-       <div class="col-md-3 text-align-center leftCont">
+       <div class="col-md-3 col-sm-12 text-align-center leftCont">
         <h6>5</h6>
         <p>BEDROOMS <br/>ALL ENSUITE<br/><span>GUESTROOM INCLUDED</span> </p>
        </div>
        <!-- end col-3 -->
-       <div class="col-md-3 text-align-center leftCont">
+       <div class="col-md-3 col-sm-12 text-align-center leftCont">
         <h6>2</h6>
         <p>SELF<br/> CONTAINED <br/>DSQs</p>
        </div>
        <!-- end col-3 -->
-       <div class="col-md-3 text-align-center leftCont">
+       <div class="col-md-3 col-sm-12 text-align-center leftCont">
         <h6>1</h6>
         <p>EXCLUSIVE<br/> GATED LOCATION <br/><span>MAJI MAZURI ROAD</span></p>
         

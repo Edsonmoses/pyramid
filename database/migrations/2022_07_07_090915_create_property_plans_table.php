@@ -21,6 +21,7 @@ class CreatePropertyPlansTable extends Migration
             $table->string('subname');
             $table->string('desc');
             $table->string('image');
+            $table->string('url')->default('#');
             $table->timestamps();
         });
     }

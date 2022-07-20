@@ -16,6 +16,7 @@ class CreateSettingsTable extends Migration
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
             $table->string('logo')->default('logo-light.png');
+            $table->string('slug')->default('null');
             $table->string('favicon')->default('favicon.jpg');
             $table->string('tophone')->default('+254 700 779 944');
             $table->string('email')->default('info@pyramidbuilders.co.ke');

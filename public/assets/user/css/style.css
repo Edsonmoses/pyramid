@@ -3547,7 +3547,7 @@ a {
     text-align: justify !important;
 }
 .leftCont {
-    height: 58px;
+    height: auto;
 }
 .leftCont p {
     float: left;
@@ -3962,5 +3962,9 @@ a {
 .nav-pills .nav-item .nav-link:hover {
     border-bottom: 2px solid #ebcfa7;
     color: #ebcfa7;
+}
+.page img {
+    width: 150px;
+    height: auto;
 }
 /*# sourceMappingURL=style.css.map */

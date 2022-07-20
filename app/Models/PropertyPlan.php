@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class PropertyPlan extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name', 'slug', 'nameb', 'subname', 'desc', 'image'
+    ];
 }

@@ -17,6 +17,7 @@ class CreateSocialMediaTable extends Migration
             $table->id();
             $table->string('icon')->default('null');
             $table->string('iconame')->default('null');
+            $table->string('iconslug')->default('null');
             $table->string('url')->default('null');
             $table->timestamps();
         });

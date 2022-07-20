@@ -8,17 +8,48 @@ use App\Models\Project;
 use Livewire\Component;
 use Illuminate\Support\Str;
 use Livewire\WithFileUploads;
+use App\Http\Livewire\Field;
+use Illuminate\Http\Request;
+use App\Models\Features;
 
 class AdminProjectsComponent extends Component
 {
     use WithFileUploads;
 
     public $project,  $title, $name, $slug, $image, $desc, $statno, $statname,
-        $statsub, $gallery, $floorplan, $fimage, $download, $downloadCount, $project_id, $disable;
+        $statsub, $gallery, $floorplan, $fimage, $download, $downloadCount, $project_id, $disable, $hbcolor;
     public $isModalOpen = 0;
     public $editModalOpen = 0;
-    public $selectedRows = [];
-    public $selectPageRows = false;
+
+    public $updateMode = false;
+    public $inputs = [];
+    public $i = 1;
+
+    /**
+     * Write code on Method
+     * @return response()
+     */
+
+    public function add($i)
+
+    {
+        $i = $i + 1;
+        $this->i = $i;
+        array_push($this->inputs, $i);
+    }
+
+
+
+    /**
+
+     * Write code on Method
+     * @return response()
+     */
+
+    public function remove($i)
+    {
+        unset($this->inputs[$i]);
+    }
 
     /**
      * The attributes that are mass assignable.
@@ -105,6 +136,7 @@ class AdminProjectsComponent extends Component
         $this->statno = '';
         $this->statname = '';
         $this->statsub = '';
+        $this->hbcolor = '';
         $this->gallery = '';
         $this->floorplan = '';
         $this->fimage = '';
@@ -125,9 +157,13 @@ class AdminProjectsComponent extends Component
             'slug' => 'required',
             'image' => 'required|mimes:png,jpg,jpeg',
             'desc' => 'required',
-            'statno' => 'required ',
-            'statname' => 'required',
-            'statsub' => 'required ',
+            //'statno.0' => 'required ',
+            //'statname.0' => 'required',
+            //'statsub.0' => 'required ',
+            //'statno.*' => 'required ',
+            // 'statname.*' => 'required',
+            //'statsub.*' => 'required ',
+            //'hbcolor' => 'required ',
             'fimage' => 'required|mimes:png,jpg,jpeg',
         ]);
         if ($this->image) {
@@ -201,9 +237,7 @@ class AdminProjectsComponent extends Component
             'slug' => $this->slug,
             'image' => $imageName,
             'desc' => $this->desc,
-            'statno' => str_replace("\n", ',', trim($this->statno)),
-            'statname' => str_replace("\n", ',', trim($this->statname)),
-            'statsub' => str_replace("\n", ',', trim($this->statsub)),
+            'hbcolor' => $this->hbcolor,
             'gallery' => str_replace("\n", ',', trim($imagesname)),
             'floorplan' => str_replace("\n", ',', trim($fimagesname)),
             'fimage' => $fimageName,
@@ -212,6 +246,15 @@ class AdminProjectsComponent extends Component
             'disable' => 'active'
 
         ]);
+        /* foreach ($this->statname as $key => $value) {
+
+            Features::create([
+                'statno' => $this->statno[$key],
+                'statname' => $this->statname[$key],
+                'statsub' => $this->statsub[$key],
+            ]);
+        }
+        $this->inputs = [];*/
 
         session()->flash(
             'message',
@@ -307,32 +350,6 @@ class AdminProjectsComponent extends Component
 
             session()->flash('message', 'Project has been Sorted Successfully.');
         }
-    }
-    public function markAllAsScheduled()
-    {
-        Project::whereIn('id', $this->selectedRows)->update(['disable' => Project::active]);
-
-        $this->dispatchBrowserEvent('updated', ['message' => 'Appointments marked as scheduled']);
-
-        $this->reset(['selectPageRows', 'selectedRows']);
-    }
-
-    public function markAllAsClosed()
-    {
-        Project::whereIn('id', $this->selectedRows)->update(['disable' => Project::inactive]);
-
-        $this->dispatchBrowserEvent('updated', ['message' => 'Appointments marked as closed.']);
-
-        $this->reset(['selectPageRows', 'selectedRows']);
-    }
-
-    public function deleteSelectedRows()
-    {
-        Project::whereIn('id', $this->selectedRows)->delete();
-
-        $this->dispatchBrowserEvent('deleted', ['message' => 'All selected appointment got deleted.']);
-
-        $this->reset(['selectPageRows', 'selectedRows']);
     }
 
     public function render()

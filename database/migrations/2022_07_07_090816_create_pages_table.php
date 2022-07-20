@@ -19,7 +19,8 @@ class CreatePagesTable extends Migration
             $table->string('name');
             $table->string('slug')->unique();
             $table->string('image')->nullable();
-            $table->string('desc');
+            $table->longText('desc');
+            $table->integer('position')->nullable('0');
             $table->timestamps();
         });
     }
