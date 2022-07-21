@@ -54,11 +54,8 @@ class AdminEditProjectsComponent extends Component
         $this->slug = $project->slug;
         $this->image = $project->image;
         $this->desc = $project->desc;
-        $this->statno = str_replace("\n", ',', trim($project->statno));
-        $this->statname = str_replace("\n", ',', trim($project->statname));
-        $this->statsub = str_replace("\n", ',', trim($project->statsub));
         $this->floorplan = explode(",", $project->floorplan);
-        $this->fimage = $project->fimage;
+        $this->fimage = explode(",", $project->fimage);
         $this->download = $project->download;
         $this->gallery = explode(",", $project->gallery);
         $this->project_id = $project->id;
@@ -110,12 +107,12 @@ class AdminEditProjectsComponent extends Component
             //'image' => 'required|mimes:png,jpg,jpeg',
             'desc' => 'required',
             //'hbcolor' => 'required',
-            'statno.0' => 'required ',
-            'statname.0' => 'required',
-            'statsub.0' => 'required ',
-            'statno.*' => 'required ',
-            'statname.*' => 'required',
-            'statsub.*' => 'required ',
+            //'statno.0' => 'required ',
+            //'statname.0' => 'required',
+            //'statsub.0' => 'required ',
+            //'statno.*' => 'required ',
+            //'statname.*' => 'required',
+            //'statsub.*' => 'required ',
             // 'fimage' => 'required|mimes:png,jpg,jpeg',
         ]);
         $project = Project::find($this->project_id);
@@ -123,9 +120,6 @@ class AdminEditProjectsComponent extends Component
         $project->name = $this->name;
         $project->slug = $this->slug;
         $project->desc = $this->desc;
-        $project->statno = $this->statno;
-        $project->statname = $this->statname;
-        $project->statsub = $this->statsub;
         if ($this->newimage) {
             if (file_exists('assets/user/images' . '/' . $project->image)) {
                 if (!empty(file_exists('assets/user/images' . '/' . $project->image))) {
@@ -142,24 +136,6 @@ class AdminEditProjectsComponent extends Component
                 $imageName = Carbon::now()->timestamp . '.' . $this->newimage->extension();
                 $this->newimage->storeAs('images', $imageName);
                 $project->image = $imageName;
-            }
-        }
-        if ($this->newfimage) {
-            if (file_exists('assets/user/images' . '/' . $project->fimage)) {
-                if (!empty(file_exists('assets/user/images' . '/' . $project->fimage))) {
-                    $fimageName = Carbon::now()->timestamp . '.' . $this->newfimage->extension();
-                    $this->newfimage->storeAs('images', $fimageName);
-                    $project->fimage = $fimageName;
-                } else {
-                    unlink('assets/user/images' . '/' . $project->fimage);
-                    $fimageName = Carbon::now()->timestamp . '.' . $this->newfimage->extension();
-                    $this->newfimage->storeAs('images', $fimageName);
-                    $project->fimage = $fimageName;
-                }
-            } else {
-                $fimageName = Carbon::now()->timestamp . '.' . $this->newfimage->extension();
-                $this->newfimage->storeAs('images', $fimageName);
-                $project->fimage = $fimageName;
             }
         }
         if ($this->newdownload) {
@@ -217,7 +193,25 @@ class AdminEditProjectsComponent extends Component
             }
             $project->floorplan = $imagefsname;
         }
-        foreach ($this->statname as $key => $value) {
+        if ($this->newfimage) {
+            if ($project->fimage) {
+                $ftimages = explode(",", $project->fimage);
+                foreach ($ftimages as $imageft) {
+                    if ($imageft) {
+                        unlink('assets/user/images' . '/' . $imageft);
+                    }
+                }
+            }
+
+            $ftimagesname = '';
+            foreach ($this->newfimage as $key => $image) {
+                $imgftName = Carbon::now()->timestamp . $key . '.' . $image->extension();
+                $image->storeAs('images', $imgftName);
+                $ftimagesname = $ftimagesname . ',' . $imgftName;
+            }
+            $project->fimage = $ftimagesname;
+        }
+        /* foreach ($this->statname as $key => $value) {
 
             Features::create([
                 'statno' => $this->statno[$key],
@@ -225,7 +219,7 @@ class AdminEditProjectsComponent extends Component
                 'statsub' => $this->statsub[$key],
             ]);
         }
-        $this->inputs = [];
+        $this->inputs = [];*/
         $project->save();
         session()->flash(
             'message',

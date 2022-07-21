@@ -8,7 +8,7 @@
           <h1>{!! $value->name !!}</h1>
           <h2>{!! $value->location !!}</h2>
             <div class="item">
-                <a href="https://pyramid-alfa.ovakast.com/projects-detail/{{ $value->url }}">
+                <a href="/projects-detail/{{ $value->url }}">
                     <p class="label success new-label"><span class="align">{{ $value->btname }} <i class="fas fa-caret-right"></i></span></p>
                 </a>
             </div>

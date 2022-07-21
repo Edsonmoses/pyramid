@@ -695,11 +695,9 @@ button[type="submit"] {
     line-height: 42px;
     font-size: 13px;
     color: #fff;
-    background: rgba(255, 255, 255, 0.1);
 }
 .side-navigation .social-media li a:hover {
     color: #26282b;
-    background: #ebcfa7;
 }
 .side-navigation.active {
     left: 0;
@@ -920,7 +918,7 @@ button[type="submit"] {
     position: absolute;
     left: 0;
     top: 0;
-    background: #26282b;
+    /*background: #26282b;
     background: -moz-linear-gradient(
         161deg,
         #26282b 0%,
@@ -935,7 +933,7 @@ button[type="submit"] {
     );
     background: linear-gradient(161deg, #26282b 0%, #26282b 49%, #9f8054 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#26282b",endColorstr="#9f8054",GradientType=1);
-    opacity: 0.65;
+    opacity: 0.65;*/
 }
 .slider .slider-container .swiper-slide .container {
     position: relative;
@@ -1042,7 +1040,7 @@ a {
     width: 20px;
     position: absolute;
     left: 15px;
-    top: calc(50% + 60px);
+    top: calc(50% + 50px);
     transform: translateY(-50%);
     z-index: 4;
     text-align: center;
@@ -1179,13 +1177,14 @@ a {
 /* PAGE HEADER */
 .page-header {
     width: 100%;
-    height: 500px;
+    height: 250px;
     display: flex;
     flex-wrap: wrap;
     padding-top: 200px;
     background-color: #26282b;
     position: relative;
     margin-bottom: 30px;
+    background-position: center;
 }
 .page-header:after {
     content: "";
@@ -2983,6 +2982,10 @@ a {
     color: #fff;
 }
 .footer .logo {
+    height: 41px;
+    margin-bottom: 15px;
+}
+.footer .creation .logo {
     height: 20px;
     margin-bottom: 15px;
 }
@@ -3865,6 +3868,7 @@ a {
     margin-bottom: 0.5em;
     text-transform: uppercase;
     margin-left: 25px;
+    width: 5.2em;
 }
 
 .content-details p {
@@ -3872,12 +3876,14 @@ a {
     font-size: 0.8em;
     text-align: left;
     margin-left: 25px;
+    height: 318px;
 }
-.content-details a {
+.content-details .content-link {
     color: #fff;
     font-size: 1.5em;
     text-align: left;
     margin-left: 25px;
+    text-decoration: none !important;
 }
 .overtext {
     color: white !important;
@@ -3893,6 +3899,10 @@ a {
     color: white !important;
     text-align: left;
     margin-left: 25px;
+    width: 5.2em;
+}
+.overtext .overtextColor {
+    color: rgba(174, 132, 30, 0.9) !important;
 }
 .content:hover .overtext h3 {
     display: none;
@@ -3967,4 +3977,5 @@ a {
     width: 150px;
     height: auto;
 }
+
 /*# sourceMappingURL=style.css.map */

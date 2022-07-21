@@ -67,11 +67,11 @@
      <li><a href="/about-us">About</a></li>
        <!-- <li><a href="/now-selling">Now Selling</a></li>-->
         <li><a href="/our-projects">Projects</a></li>
-        <li><a href="/contact-us">Contact</a></li>
+        <li><a href="/contact-us">Contacts</a></li>
     </ul>
   </div>
     <p>By aiming to take the life quality to an upper level with the whole realized Projects, Homepark continues to be the address of luxury.</p>
-    <h6>+254 722 981 125 <br/>+254 720 150 988</h6>
+    <h6>0700 77 99 44 <br/> 0755 77 97 79</h6>
     <p><a href="#">hello@pyramidbuilders.co.ke</a></p>
     <ul class="social-media">
       <!--<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -141,7 +141,7 @@
       <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.20s">
         <div class="contact-box">
           <h5>Phone Number</h5>
-          <h3>+254 722 981 125 <br/>+254 720 150 988</h3>
+          <h3>0700 77 99 44 <br/> 0755 77 97 79</h3>
           <p><a href="#">info@pyramidbuilders.co.ke</a></p>
           <ul>
             <!--<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>

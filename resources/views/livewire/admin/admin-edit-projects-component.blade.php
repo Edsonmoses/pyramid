@@ -109,12 +109,21 @@
                 <br/>
                 <div class="form-group">
                     <label for="newfimage">Bottom image</label>
-                    <input type="file" class="form-control" id="newfimage" placeholder="upload image" wire:model="newfimage">
-                    @if($newfimage)
-                        <img src="{{ $newfimage->temporaryUrl() }}" width="120"/>
+                    <input type="file" class="form-control" id="newfimage" placeholder="upload image" wire:model="newfimage" multiple/>
+                   @if($newfimage)
+                        @foreach ($newfimage as $newfimage)
+                            @if ($newfimage)
+                                <img src="{{ $newfimage->temporaryUrl() }}" width="120" style="float: left; padding:5px;"/>
+                            @endif
+                        @endforeach
                     @else
-                        <img src="{{ asset('assets/user/images') }}/{{ $fimage }}" width="120"/>
+                        @foreach ($fimage as $image)
+                            @if ($image)
+                                <img src="{{ asset('assets/user/images') }}/{{ $image }}" width="120" style="float: left; padding:5px;"/>
+                            @endif
+                        @endforeach
                     @endif
+                    <p style="clear: both"></p>
                     @error('fimage') <span class="text-danger">{{ $message }}</span>@enderror
                 </div>
                 <br/>

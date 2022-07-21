@@ -131,14 +131,15 @@ class AdminProjectsComponent extends Component
         $this->title = '';
         $this->name = '';
         $this->slug = '';
-        $this->image = '';
+        $this->reset('image');
         $this->desc = '';
         $this->statno = '';
         $this->statname = '';
         $this->statsub = '';
         $this->hbcolor = '';
-        $this->gallery = '';
-        $this->floorplan = '';
+        $this->reset('gallery');
+        $this->reset('floorplan');
+        $this->reset('fimage');
         $this->fimage = '';
         $this->download = '';
         $this->project_id = '';
@@ -181,21 +182,6 @@ class AdminProjectsComponent extends Component
                 $this->image->storeAs('images', $imageName);
             }
         }
-        if ($this->fimage) {
-            if (file_exists('assets/user/images' . '/' . $this->fimage)) {
-                if (!empty(file_exists('assets/user/images' . '/' . $this->fimage))) {
-                    $fimageName = Carbon::now()->timestamp . '.' . $this->fimage->extension();
-                    $this->fimage->storeAs('images', $fimageName);
-                } else {
-                    unlink('assets/user/images' . '/' . $this->fimage);
-                    $fimageName = Carbon::now()->timestamp . '.' . $this->fimage->extension();
-                    $this->fimage->storeAs('images', $fimageName);
-                }
-            } else {
-                $fimageName = Carbon::now()->timestamp . '.' . $this->fimage->extension();
-                $this->fimage->storeAs('images', $fimageName);
-            }
-        }
         if ($this->download) {
             if (file_exists('assets/user/images' . '/' . $this->download)) {
                 if (!empty(file_exists('assets/user/images' . '/' . $this->download))) {
@@ -230,6 +216,14 @@ class AdminProjectsComponent extends Component
                 $fimagesname = $fimagesname . ',' . $imgfName;
             }
         }
+        if ($this->fimage) {
+            $ftimagesname = '';
+            foreach ($this->fimage as $key => $image) {
+                $imgftName = Carbon::now()->timestamp . $key . '.' . $image->extension();
+                $image->storeAs('images', $imgftName);
+                $ftimagesname = $ftimagesname . ',' . $imgftName;
+            }
+        }
         Project::updateOrCreate(['id' => $this->project_id], [
 
             'title' => $this->title,
@@ -240,21 +234,12 @@ class AdminProjectsComponent extends Component
             'hbcolor' => $this->hbcolor,
             'gallery' => str_replace("\n", ',', trim($imagesname)),
             'floorplan' => str_replace("\n", ',', trim($fimagesname)),
-            'fimage' => $fimageName,
+            'fimage' => str_replace("\n", ',', trim($ftimagesname)),
             'download' => $downName,
             'downloadCount' => '0',
             'disable' => 'active'
 
         ]);
-        /* foreach ($this->statname as $key => $value) {
-
-            Features::create([
-                'statno' => $this->statno[$key],
-                'statname' => $this->statname[$key],
-                'statsub' => $this->statsub[$key],
-            ]);
-        }
-        $this->inputs = [];*/
 
         session()->flash(
             'message',
@@ -283,7 +268,7 @@ class AdminProjectsComponent extends Component
         $this->statsub  = str_replace("\n", ',', trim($project->statsub));
         $this->gallery = str_replace("\n", ',', trim($project->imagesname));
         $this->floorplan  = str_replace("\n", ',', trim($project->fimagesname));
-        $this->fimage = $project->fimage;
+        $this->fimage = str_replace("\n", ',', trim($project->fimage));
         $this->download = $project->download;
 
         $this->openModalPopedit();

@@ -71,7 +71,7 @@
                         <div class="form-group">
                                <p style="clear: both; width:100%"></p>
                              <label for="newfimage">Bottom image</label>
-                            <input type="file" class="form-control" id="fimage" placeholder="Enter fimage" wire:model="fimage"/>
+                            <input type="file" class="form-control" id="fimage" placeholder="Enter fimage" wire:model="fimage" multiple/>
                             @if($fimage)
                                 <img src="{{ $fimage->temporaryUrl() }}" width="120"/>
                             @endif

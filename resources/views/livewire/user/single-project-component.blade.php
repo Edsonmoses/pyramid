@@ -14,7 +14,7 @@
             <h3 style="font-size: 1.3em"><strong>{{ $project->title }}</strong> </h3>
         </div>--}}
         <!-- end col-12 -->
-        @if ($project->slug == 'tende-ridge')
+        @if ($project->slug == 'tende-ridge' || $project->slug == 'pyramid-ridge')
        <div class="col-md-3 col-sm-12 text-align-center leftCont">
          <h6 style="color: #C8773D !important; border-right: 1px solid #C8773D !important;">6</h6>
         <p>CONTEMPORARY DESIGNED TOWNHOUSES <span></span></p>
@@ -84,12 +84,12 @@
 	<!-- end container -->
     <!--floor plans-->
     
-<header class="slider" style="background: transparent !important">
+<header class="slider">
   <div class="slider-container">
     <div class="swiper-wrapper">
        @foreach (explode(",",$project->floorplan) as $image)
         @if (!empty($image))
-          <div class="swiper-slide" data-background="{{ asset('assets/user/images')}}/{{ $image }}" data-stellar-background-ratio="1.15">
+          <div class="swiper-slide" data-background="{{ asset('assets/user/images')}}/{{ $image }}" style="background-position: center;">
             <div class="container">
             </div>
             <!-- end container --> 
@@ -98,42 +98,32 @@
       @endforeach
       <!-- end swiper-slide -->
     </div>
-    {{-- Add Pagination -->
-    <div class="inner-elements">
-      <div class="container">
-        <div class="pagination"></div>
-        <!-- end pagination -->
-        <div class="button-prev">PREV</div>
-        <!-- end button-prev -->
-        <div class="button-next">NEXT</div>
-        <!-- end button-next -->
-        <div class="social-media">
-          <h6>SOCIAL MEDIA</h6>
-          <ul>
-            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-google"></i></a></li>
-            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-          </ul>
-        </div>
-        <!-- end social-media --> 
-      </div>
-      <!-- end container --> 
-    </div>--}}
     <!-- end inner-elements --> 
   </div>
   <!-- end slider-container --> 
 </header>
     <!--end floor plans-->
 </section>
-<section class="big-image mb-5">
-  <img src="{{ asset('assets/user/images')}}/{{ $project->fimage }}" alt="Image">
-  <div class="container">
-    <!-- end row --> 
+  <header class="slider">
+  <div class="slider-container">
+    <div class="swiper-wrapper">
+       @foreach (explode(",",$project->fimage) as $image)
+        @if (!empty($image))
+          <div class="swiper-slide" data-background="{{ asset('assets/user/images')}}/{{ $image }}" style="background-position: center;">
+            <div class="container">
+            </div>
+            <!-- end container --> 
+          </div>
+        @endif
+      @endforeach
+      <!-- end swiper-slide -->
+    </div>
+    <!-- end inner-elements --> 
   </div>
-  <!-- end container --> 
-</section>
-<section class="downloads mb-5 mt-10">
+  <!-- end slider-container --> 
+</header>
+  <!-- end footer image --> 
+<section class="downloads mb-5 mt-5">
   <div class="container">
    <a href="#" wire:click.prevent="export({{$project->id}})"> 
         <img src="{{ asset('assets/user/images/arrow.png')}}" alt="{{$project->name}}">
