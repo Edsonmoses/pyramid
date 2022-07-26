@@ -7,7 +7,7 @@
 </header>
 
 <!-- end page-header -->
-<section class="about-content mb-5">
+<section class="about-content">
 	<div class="container">
 		<div class="row ">
        {{-- <div class="col-md-12 text-align-left mb-5 text-blue">
@@ -103,8 +103,7 @@
   <!-- end slider-container --> 
 </header>
     <!--end floor plans-->
-</section>
-  <header class="slider">
+      <header class="slider">
   <div class="slider-container">
     <div class="swiper-wrapper">
        @foreach (explode(",",$project->fimage) as $image)
@@ -123,8 +122,9 @@
   <!-- end slider-container --> 
 </header>
   <!-- end footer image --> 
-<section class="downloads mb-5 mt-5">
-  <div class="container">
+</section>
+ <section class="m-downloads" data-background="{{ asset('assets/user/images/download-brochure.jpg')}}" data-stellar-background-ratio="1.15">
+  <div class="container-flued downloads">
    <a href="#" wire:click.prevent="export({{$project->id}})"> 
         <img src="{{ asset('assets/user/images/arrow.png')}}" alt="{{$project->name}}">
         <p>VIEW BROCHURE</p>

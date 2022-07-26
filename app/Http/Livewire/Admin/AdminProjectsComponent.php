@@ -8,8 +8,6 @@ use App\Models\Project;
 use Livewire\Component;
 use Illuminate\Support\Str;
 use Livewire\WithFileUploads;
-use App\Http\Livewire\Field;
-use Illuminate\Http\Request;
 use App\Models\Features;
 
 class AdminProjectsComponent extends Component

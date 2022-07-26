@@ -3741,6 +3741,27 @@ a {
     padding-top: 5px !important;
     margin-left: -15px;
 }
+.m-downloads {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    background: no-repeat;
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    margin: -90px 0 0 0;
+    padding: 110px 0 110px 0;
+}
+@media only screen and (max-width: 600px) {
+    .m-downloads {
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+        background: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+        width: 100%;
+        margin: -113px 0 0 0;
+        padding: 110px 0 110px 0;
+    }
+}
 .downloads {
     background: #676766 !important;
     height: 150px;
